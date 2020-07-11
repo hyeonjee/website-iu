@@ -1,0 +1,43 @@
+
+.visual {
+    position: relative;
+}
+
+.visual button {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.visual button:before {
+    font-family: 'xeicon';
+    color: white;
+    font-size: 20px;
+}
+
+.visual button.slick-prev {
+    left: 20px;
+    font-size: 0;
+    color: transparent;
+}
+
+.visual button.slick-prev:before {
+    content: "\e93b";
+}
+
+
+.visual button.slick-next {
+    right: 20px;
+    font-size: 0;
+    color: transparent;
+}
+
+.visual button.slick-next:before {
+    content: "\e93e";
+}

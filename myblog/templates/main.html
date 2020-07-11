@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% include 'shared/navbar.html' %}
+<link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+
+
+<div id="main">
+    <div id="contents">
+        <h1>IU</h1>
+        <p>Official Website</p>
+        <a href="{% url 'introduction:profile'%}"> About IU </a>
+    </div>
+</div>
+{% endblock %}
