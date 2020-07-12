@@ -1,9 +1,21 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
+{% include 'shared/navbar.html'%}
+<link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
 
-<h1>상세보기 페이지</h1>
-<h3>글 제목:{{post.title}}</h3><br>
-<h3>글 내용:{{post.content}}</h3><br>
-<h3>작성 시각:{{post.created_at}}</h3><br>
+<div class="memo">
+    <img src="{%static 'images/memo.png'%}" width="100%">
+</div>
+
+<div id="detail">
+    <h3>제목: {{post.title}}</h3><br>
+    <h3>내용: {{post.content}}</h3><br>
+    <h3>작성 시각:{{post.created_at}}</h3><br>
+</div>
+
+
+
 
 {% endblock%}

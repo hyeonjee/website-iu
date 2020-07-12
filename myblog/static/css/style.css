@@ -232,3 +232,55 @@ a{
     color: white;
     text-decoration: none;
 }
+
+.container {
+    padding-top: 30px;
+    font-family: 'Yeon Sung', cursive;
+}
+
+
+.container form{
+    padding-top: 20px;
+}
+
+.card{
+   height: 0%;
+   border-color: transparent;
+   background-color: transparent;
+}
+
+.card-body{
+
+    font-family: 'Gamja Flower', cursive;
+   
+}
+
+.card-body p{
+    padding-top: 10px;
+}
+
+#detail{
+    padding: 20px;
+    font-family: 'Yeon Sung', cursive;
+    position: absolute;
+    top: 35%;
+    left: 35%;
+}
+
+.memo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);   
+}
+
+.container2{
+    position: absolute;
+    top: 15%;
+    font-family: 'Yeon Sung', cursive;
+}
+
+.container2 h1{
+    padding-left: 10%;
+    padding-bottom: 5%;
+}
+

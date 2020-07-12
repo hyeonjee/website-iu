@@ -1,13 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
+{% include 'shared/navbar.html' %}
+
+<link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
 
 <div class="container">
     <h1>방명록 쓰기</h1>
-    <form action="{% url 'posts:create' %}" method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="글 작성" class="btn btn-outline-primary">
-    </form>
+    <div class="form">
+        <form action="{% url 'posts:create' %}" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <br/>
+            <input type="submit" value="글 작성" class="btn btn-outline-primary">
+        </form>
+    </div>
 </div>
 
 {% endblock %}
