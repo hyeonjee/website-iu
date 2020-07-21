@@ -147,7 +147,7 @@ a{
 .card{
 
     padding-top: 20px;
-    width: 400px;
+    width: 300px;
     height: 400px;
     display: flex;
     margin-left: 55px;
@@ -233,11 +233,10 @@ a{
     text-decoration: none;
 }
 
-.container {
+.container{
     padding-top: 30px;
     font-family: 'Yeon Sung', cursive;
 }
-
 
 .container form{
     padding-top: 20px;
@@ -247,40 +246,63 @@ a{
    height: 0%;
    border-color: transparent;
    background-color: transparent;
+
 }
 
 .card-body{
-
     font-family: 'Gamja Flower', cursive;
-   
 }
 
 .card-body p{
     padding-top: 10px;
 }
 
-#detail{
-    padding: 20px;
-    font-family: 'Yeon Sung', cursive;
-    position: absolute;
-    top: 35%;
-    left: 35%;
+.card-title{
+    font-size: 30px;
 }
 
-.memo{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);   
+#detail{
+    padding-top: 5%;
+    padding-left: 22%;
+    padding-bottom: 10%;
+    font-family: 'Yeon Sung', cursive;  
 }
+
+#detailcontents{
+    float: left;
+    width: 40%;
+    padding-top: 13%;
+    padding-right: 50px;
+}
+
+#detailcontents h3{
+    word-break: break-all;
+
+}
+
+
 
 .container2{
+    
     position: absolute;
-    top: 15%;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 10%;
     font-family: 'Yeon Sung', cursive;
 }
 
 .container2 h1{
-    padding-left: 10%;
+    padding-left: 5%;
+    padding-bottom: 10px;
+}
+
+.item{
+    padding-left: 80%;
     padding-bottom: 5%;
+}
+
+
+#pic{
+    padding-top: 10%;
 }
 
