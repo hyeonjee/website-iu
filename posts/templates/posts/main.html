@@ -2,39 +2,45 @@
 {% block content %}
 {% load static %}
 {% include 'shared/navbar.html' %}
-<link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
-<img src="{% static 'images/hh.jpg'%}"  style="margin-left: 23.5%;">
+    {% if user.is_authenticated %}
+        <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+        <img src="{% static 'images/hh.jpg'%}"  style="margin-left: 23.5%;">
 
-<div class="container2">
-    <h1>팬레터</h1>
-    <div class="item">
-        <a href="{%url 'posts:new' %}" class="btn btn-primary">새 글 쓰기</a>
-    </div>
-    <div class="row">
-        {% for post in posts %}
-        <div class="col-md-4 col-12">
-            <div class="card" style="width: 15rem; margin-top:20px;">
-                <div class="card-body" >
-                    <h5 class="card-title" style="color: indigo;">
-                        {{post.title}}
-                    </h5>
-                    <p class="card-text" style="color: indigo;">
-                        {{post.content}}
-                    </p>
-                    <p style="color: indigo;">
-                        {{post.created_at}}
-                    </p>
-                    <br />
-                    <a href="{% url 'posts:show' post.id %}" class="btn btn-primary">상세보기</a>
+        <div class="container2">
+        <h1>팬레터</h1>
+        <div class="item">
+            <a href="{%url 'posts:new' %}" class="btn btn-primary">새 글 쓰기</a>
+        </div>
+        <div class="row">
+            {% for post in posts %}
+            <div class="col-md-4 col-12">
+                <div class="card" style="width: 15rem; margin-top:20px;">
+                    <div class="card-body" >
+                        <h5 class="card-title" style="color: indigo;">
+                            {{post.title}}
+                        </h5>
+                        <p class="card-text" style="color: indigo;">
+                            {{post.content}}
+                        </p>
+                        <p style="color: indigo;">
+                            {{post.created_at}}
+                        </p>
+                        <br />
+                        <a href="{% url 'posts:show' post.id %}" class="btn btn-primary">상세보기</a>
+                    </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div>
 
-</div>
+        </div>
 
+    {% else %}
+    <h3> 로그인 후 이용이 가능합니다. </h3> 
+    <a href="{% url 'account_login' %}" class= "btn btn-warning">로그인</a>
+    <a href="{% url 'account_signup' %}" class= "btn btn-warning">회원가입</a>
+    {% endif %}
 
 
 {% endblock %}
