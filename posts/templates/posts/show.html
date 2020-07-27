@@ -17,7 +17,7 @@
         <h3>작성자: 알 수 없음</h3><br>
         {% endif %}
 
-
+   
         <br>
         <br>
         {% if user == post.user %}
@@ -29,11 +29,11 @@
 
     <div id="pic">
         {% if post.image %}
-        <img src="{{ post.image.url }}" alt="" width="30%" height="30%">
+             <img src="{{ post.image.url }}" alt="사진" width="30%" height="30%">
         {% endif %}
     </div>
 </div>
 
     
 
-{% endblock%}
+{% endblock %}

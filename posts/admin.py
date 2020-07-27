@@ -12,6 +12,7 @@ class PostAdmin(admin.ModelAdmin):
         "content",
         "view_count",
         "created_at",
+        "image",
     )
 
 

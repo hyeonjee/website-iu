@@ -25,9 +25,9 @@ def main(request):
     }
     return render(request, 'posts/main.html', context)    
 
-def show(request, id) :
+def show(request, id):
     post = get_object_or_404(Post, pk=id)
-    return render(request, 'posts/show.html', {'post':post}) 
+    return render(request, 'posts/show.html', {"post":post}) 
 
 
 def update(request, id):   
@@ -38,9 +38,9 @@ def update(request, id):
         post.image = request.FILES.get('image')
         post.save()
         return redirect('posts:show', post.id)
-    return render(request, 'posts/update.html', {'post':post})
+    return render(request, 'posts/edit.html', {"post":post})
 
 def delete(request, id):
     post = get_object_or_404(Post, pk=id)
     post.delete()
-    return redirect("posts:main")
+    return redirect('posts:main')
