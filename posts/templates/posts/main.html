@@ -18,13 +18,16 @@
                 <div class="card" style="width: 15rem; margin-top:20px;">
                     <div class="card-body" >
                         <h5 class="card-title" style="color: indigo;">
-                            {{post.title}}
+                            제목:{{post.title}}
                         </h5>
                         <p class="card-text" style="color: indigo;">
-                            {{post.content}}
+                            내용:{{post.content}}
                         </p>
                         <p style="color: indigo;">
                             {{post.created_at}}
+                        </p>
+                        <p style="color: indigo;">
+                            조회수:{{post.view_count}}
                         </p>
                         <br />
                         <a href="{% url 'posts:show' post.id %}" class="btn btn-primary">상세보기</a>
