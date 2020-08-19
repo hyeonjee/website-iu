@@ -38,9 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    # Django-allauth 관련 앱
     'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
+    'allauth.account', #가입계정관리
+    'allauth.socialaccount', #소셜계정관리
+    'allauth.socialaccount.providers.google', #facebook로그인 원하면 google자리에 facebook
 
 
     'posts',
